@@ -36,3 +36,18 @@ public class StudentManager {
 
     return null;
   }
+
+  // Removes a student by ID
+  public void removeStudent(String studentId) {
+    
+    for (int i = 0; i < students.size(); i++) {
+      if (students.get(i).getStudentId().equals(studentId)) {
+        students.remove(i);
+        System.out.println("Student removed successfully.");
+        return;
+      }
+    }
+    
+    System.out.println("Student not found.");
+  }
+}
