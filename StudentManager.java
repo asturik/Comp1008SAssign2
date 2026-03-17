@@ -11,3 +11,16 @@ public class StudentManager {
     students.add(student);
     System.out.println("Student added successfully.");
   }
+
+  // Displays all students in the list
+  public void displayStudents() {
+    
+    if (students.isEmpty()) {
+      System.out.println("No students found.");
+      return;
+    }
+
+    for (Student student : students) {
+      student.displayInfo();
+    }
+  }
