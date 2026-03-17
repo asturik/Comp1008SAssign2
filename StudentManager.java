@@ -24,3 +24,15 @@ public class StudentManager {
       student.displayInfo();
     }
   }
+
+  // Searches for a student by ID
+  public Student searchStudent(String studentId) {
+    
+    for (Student student : students) {
+      if (student.getStudentId().equals(studentId)) {
+        return student;
+      }
+    }
+
+    return null;
+  }
